@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+  flex-shrink: 0;
+  height: rem(176px);
+  display: flex;
+  align-items: center;
+
+  &__container {
+    padding: rem(30px 10px 35px);
+  }
+
+  &__title {
+    font-size: rem(54px);
+    margin-bottom: rem(20px);
+    color: $coral;
+  }
+
+  &__text {
+    font-size: rem(26px);
+  }
+}
+
+@include below(800px) {
+  .header {
+    &__container {
+      padding: rem(20px 10px 25px);
+    }
+    &__title {
+      font-size: rem(48px);
+      margin-bottom: rem(10px);
+    }
+  }
+}

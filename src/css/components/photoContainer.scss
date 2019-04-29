@@ -1,0 +1,124 @@
+$arrowWidth: rem(217px);
+
+.slick-slide {
+  font-size: 0;
+}
+
+.slick-slider .slick-list, .slick-slider .slick-track, .slick-slide > div {
+  height: 100%;
+}
+
+.photoContainer {
+  height: 100%;
+  height: calc(100% - #{rem(176px)});
+  position: relative;
+
+  &__slide {
+    height: 100%;
+  }
+
+  &__image {
+    @supports (object-fit: cover) {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__arrow {
+    height: 100%;
+    width: $arrowWidth;
+    overflow: hidden;
+    position: absolute;
+    z-index: 4;
+    background: transparent;
+    @extend %before;
+    @extend %after;
+    top: 0;
+
+    &:hover:before {
+        opacity: .6;
+    }
+
+    &:before {
+      background-image: linear-gradient(
+          to right,
+          hsl(0, 0%, 14%) 0%,
+          hsla(0, 0%, 14%, 0.987) 8.1%,
+          hsla(0, 0%, 14%, 0.951) 15.5%,
+          hsla(0, 0%, 14%, 0.896) 22.5%,
+          hsla(0, 0%, 14%, 0.825) 29%,
+          hsla(0, 0%, 14%, 0.741) 35.3%,
+          hsla(0, 0%, 14%, 0.648) 41.2%,
+          hsla(0, 0%, 14%, 0.55) 47.1%,
+          hsla(0, 0%, 14%, 0.45) 52.9%,
+          hsla(0, 0%, 14%, 0.352) 58.8%,
+          hsla(0, 0%, 14%, 0.259) 64.7%,
+          hsla(0, 0%, 14%, 0.175) 71%,
+          hsla(0, 0%, 14%, 0.104) 77.5%,
+          hsla(0, 0%, 14%, 0.049) 84.5%,
+          hsla(0, 0%, 14%, 0.013) 91.9%,
+          hsla(0, 0%, 14%, 0) 100%
+      );
+      left: 0;
+      top: 0;
+      background-repeat: no-repeat;
+      opacity: .4;
+      transition: all .25s;
+      height: 100%;
+      width: 100%;
+    }
+
+    &:after {
+        width: rem(24px);
+        height: rem(24px);
+        border-bottom: rem(2px) solid $white;
+        border-left: rem(2px) solid $white;
+        transform: rotate(45deg);
+        left: calc(50% - #{rem(24px)/2});
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        transition: all .25s;
+    }
+     
+    &--prev {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+
+      &:after {
+        left: auto;
+        right: calc(50% - #{rem(24px)/2});
+        transform: rotate(-45deg) scaleX(-1);
+      }
+
+      &:before {
+        transform: scaleX(-1);
+      }
+    }
+
+    &:focus {
+        outline: none;
+
+        &:after {
+            width: rem(24px);
+            height: rem(24px);
+            border-bottom: rem(4px) solid $coral;
+            border-left: rem(4px) solid $coral;
+        }
+      }
+  }
+}
+
+@include below(800px) {
+  $arrowWidth: rem(100px);
+  .photoContainer {
+    &__arrow {
+      width: $arrowWidth;
+    } 
+  }
+}

@@ -1,0 +1,50 @@
+$size: rem(70px);
+
+.help {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  transition: ease .25s;
+  width: 100%;
+  transform: translateY(calc(100% - #{$size} ));
+
+  &__icon {
+    width: $size;
+    height: $size;
+    background-image: url(../imgs/question.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: rem(40px 40px);
+    border-radius: rem(0px 20px 0 0);
+    background-color: $black;
+    transition: ease .25s;
+  }
+
+  &:hover {
+    transform: translateY(0);
+
+    .help__icon {
+      background-size: rem(44px 44px);
+    }
+  }
+
+  &__text {
+    transition: ease .25s;
+    background-color: $black;
+    padding: rem(35px);
+
+    p {
+      padding-bottom: rem(10px);
+    }
+  }
+}
+
+@include below(800px) {
+  .help {
+    &__text {
+      font-size: rem(16px);
+      padding: rem(18px) rem(20px);
+    }
+  }
+}

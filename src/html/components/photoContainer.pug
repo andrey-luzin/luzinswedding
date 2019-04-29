@@ -1,0 +1,7 @@
+.photoContainer.js-photoContainer
+  - var n = 0;
+
+  while n < 10
+    .photoContainer__slide
+      img.photoContainer__image(src="./imgs/photoContainer/SaveTheDay" + (n+1) + ".jpg")
+      - n++;
