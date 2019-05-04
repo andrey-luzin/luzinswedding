@@ -10,7 +10,7 @@ $arrowWidth: rem(217px);
 
 .photoContainer {
   height: 100%;
-  height: calc(100% - #{rem(176px)});
+  min-height: calc(100vh - #{rem(176px)});
   position: relative;
 
   &__slide {
@@ -107,8 +107,8 @@ $arrowWidth: rem(217px);
         &:after {
             width: rem(24px);
             height: rem(24px);
-            border-bottom: rem(4px) solid $coral;
-            border-left: rem(4px) solid $coral;
+            border-bottom: rem(4px) solid $primary-color;
+            border-left: rem(4px) solid $primary-color;
         }
       }
   }

@@ -1,5 +1,6 @@
 // font
-$base-font-size: 16px;
+$base-font-size: 18px;
+$font-base: 'PT Sans', sans-serif;
 $font-beautiful: 'Poiret One', cursive;
 
 // colors
@@ -7,6 +8,14 @@ $white: #fffaf0;
 $black: #202020;
 $gray: #b1b4b8;
 $coral: #ff8b52;
+$green: #527a2d;
+$pink: #fd89a8;
+
+// semantic colors
+$primary-color: $pink;
+$secondary-color: $green;
+$back-color: $white;
+$font-color: $black;
 
 //container
 

@@ -1,0 +1,8 @@
+mixin faq(data)
+  .faq
+    .faq__section.faq__section--question
+      .faq__title Вопрос
+      .faq__question!= data.question
+    .faq__section.faq__section--answer
+      .faq__title Ответ
+      .faq__answer!= data.answer

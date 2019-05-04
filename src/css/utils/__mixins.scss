@@ -37,8 +37,6 @@
   transition: all .25s ease-out;
 }
 
-
-
 %pattern {
   background-image: url(../imgs/pattern.jpg);
   background-repeat: no-repeat;
@@ -71,15 +69,4 @@
 
 @mixin transition($property: all) {
   transition: $property 0.25s ease-out;
-}
-
-@mixin pseudoLink($color: inherit) {
-  text-decoration: none;
-  border-bottom: 1px dashed;
-  color: $color;
-  @include transition(all);
-
-  &:hover {
-    border-bottom-color: transparent;
-  }
 }

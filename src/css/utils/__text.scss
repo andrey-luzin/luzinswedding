@@ -1,5 +1,5 @@
 .text {
-
+  line-height: 1.25;
   &--strong {
     font-weight: 700;
   }
@@ -8,23 +8,43 @@
     font-style: italic;
   }
 
-  &--h1, h1 {
-    font-size: rem(30px);
-    line-height: rem(32px);
+  &--h1, &--h2, &--h3 {
     text-align: center;
-    margin: 0 0 35px;
-    text-transform: uppercase;
-    font-weight: 700;
+    font-family: $font-beautiful;
   }
 
-  &--h2, h2 {
-    font-size: rem(24px);
-    line-height: rem(25px);
-    text-align: left;
-    margin: 35px 0 24px;
+  &--h1 {
+    font-size: rem(60px);
+    margin-bottom: rem(36px);
+    color: $pink;
+  }
 
-    &:first-child {
-      margin-top: 0;
+  &--h2 {
+    font-size: rem(50px);
+    margin-bottom: rem(34px);
+    color: $pink;
+  }
+
+  &--h3 {
+    font-size: rem(24px);
+    margin-bottom: rem(26px);
+    display: inline-block;
+    @extend %before;
+    @extend %after;
+
+    &:before, &:after {
+      width: rem(40px);
+      height: 1px;
+      background-color: $pink;
+      top: 50%;
+    }
+
+    &:before {
+      left: rem(-55px);
+    }
+
+    &:after {
+      right: rem(-55px);
     }
   }
 
@@ -53,6 +73,10 @@
   }
 
   p {
-    margin-bottom: 14px;
+    margin-bottom: rem(12px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

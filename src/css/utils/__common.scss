@@ -15,9 +15,9 @@ html {
 body {
   min-width: 320px;
   height: 100%;
-  background-color: $black;
-  color: $white;
-  font-family: $font-beautiful;
+  background-color: $back-color;
+  color: $font-color;
+  font-family: $font-base;
   
   *:before, *:after {
     -webkit-font-smoothing: subpixel-antialiased;
@@ -26,7 +26,7 @@ body {
 
 *::selection {
   color: $white;
-  background: $coral !important;
+  background: $primary-color !important;
 }
 
 img[src=""] {
@@ -53,10 +53,23 @@ img {
   max-width: 100%;
 }
 
+a {
+  color: $green;
+  @extend %transition;
+  text-decoration: none;
+  border-bottom: 1px solid;
+
+  &:hover, &:focus {
+    border-color: transparent;
+  }
+}
+
 .container {
   max-width: 1000px;
   padding: 0 20px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 
   &--full {
     max-width: 100%;
@@ -67,16 +80,16 @@ img {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
 }
-
 
 @include below(800px) {
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .container {
-    width: 100%;
+    padding: 0 20px;
+    max-width: 100%;
   }
 }

@@ -4,30 +4,51 @@
   height: rem(176px);
   display: flex;
   align-items: center;
-
-  &__container {
-    padding: rem(30px 10px 35px);
-  }
+  padding: rem(30px 20px 35px);
+  display: flex;
+  flex-direction: column;
+  display: grid;
+  grid-template: "a  ." auto "a  ." auto/auto;
+  justify-items: start;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font-beautiful;
 
   &__title {
+    grid-area: a;
     font-size: rem(54px);
     margin-bottom: rem(20px);
-    color: $coral;
+    line-height: 1;
+    color: $primary-color;
+    
+    @supports (display: grid) {
+      margin-bottom: 0;
+    }
   }
 
   &__text {
     font-size: rem(26px);
+    justify-self: end;
   }
 }
 
 @include below(800px) {
   .header {
-    &__container {
-      padding: rem(20px 10px 25px);
-    }
+    padding: rem(20px 20px 25px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: space-around;
+
     &__title {
       font-size: rem(48px);
       margin-bottom: rem(10px);
+      flex-basis: 100%;
+    }
+
+    &__text {
+      margin: rem(0 10px);
     }
   }
 }
