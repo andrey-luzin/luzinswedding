@@ -1,0 +1,10 @@
+mixin event(data)
+  article.event
+    section.event__section.event__section--heading
+      h4.event__title!= data.title
+      if data.time
+      .event__time!= data.time
+    section.event__section.event__section--content
+      if data.emoji
+      .event__emoji!= data.emoji
+      .event__text!= data.text

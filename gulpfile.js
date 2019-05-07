@@ -33,7 +33,6 @@ const path = {
   },
   src: {
     html: srcPath + 'html/pages/*.pug',
-    json: srcPath + 'html/constants.json',
     js: srcPath + 'js/*.js',
     js_libs: srcPath + 'js/libs/**/*.js',
     style: srcPath + 'css/styles.scss',
@@ -69,9 +68,6 @@ gulp.task('html:build', function(cb) {
   gulp.src(path.src.html)
     .pipe(plumber({
       errorHandler: notify.onError()
-    }))
-    .pipe(data(function(file) {
-      return JSON.parse(fs.readFileSync(path.src.json));
     }))
     .pipe(pug())
     .pipe(gulp.dest(path.build.html))

@@ -14,15 +14,22 @@
   justify-content: space-between;
   font-family: $font-beautiful;
 
-  &__title {
+  &__logo {
     grid-area: a;
-    font-size: rem(54px);
     margin-bottom: rem(20px);
-    line-height: 1;
-    color: $primary-color;
+    display: block;
+    border: none;
     
     @supports (display: grid) {
       margin-bottom: 0;
+    }
+
+    &:hover, &:focus {
+      opacity: .75;
+    }
+
+    & img {
+        max-height: 100%;
     }
   }
 
@@ -41,14 +48,19 @@
     justify-items: center;
     justify-content: space-around;
 
-    &__title {
-      font-size: rem(48px);
-      margin-bottom: rem(10px);
-      flex-basis: 100%;
+    &__logo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: rem(6px);
+
+      & img {
+        max-height: rem(75px);
+      }
     }
 
     &__text {
-      margin: rem(0 10px);
+    font-size: rem(24px);
+    margin: rem(0 10px);
     }
   }
 }

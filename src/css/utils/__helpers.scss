@@ -62,44 +62,8 @@
   scroll-behavior: smooth;
 }
 
-.h-link {
-  &--nodecor {
-    text-decoration: none;
-    @include transition();
-
-    &:hover {
-      opacity: .75;
-    }
-  }
-}
-
 .h-flex {
   &--column {
     flex-direction: column;
-  }
-}
-
-.h-columns {
-  column-gap: 30px;
-
-  &--3 {
-    columns: 3;
-  }
-}
-
-.h-icon {
-  &--pdf {
-    padding-left: 35px;
-    @extend %after;
-
-    &:after {
-      background-image: url(../imgs/contact/pdf.png);
-      background-size: cover;
-      @extend %vertAlign;
-      left: 0;
-      height: 26px;
-      width: 25px;
-      z-index: 10;
-    }
   }
 }
