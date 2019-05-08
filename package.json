@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "gulp": "gulp",
     "start": "NODE_ENV=development gulp default",
-    "robots": "echo 'User-agent: *' > docs/robots.txt && echo 'Disallow: /' >> docs/robots.txt",
+    "robots": "echo 'User-agent: *' > docs/robots.txt && echo 'Disallow: /' >> docs/robots.txt && echo 'www.luzinswedding.ru' > docs/CNAME",
     "build": "NODE_ENV=production gulp clean && gulp production && npm run robots"
   },
   "author": "Andrey Luzin",
