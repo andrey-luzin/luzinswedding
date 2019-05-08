@@ -44,7 +44,7 @@
   }
 }
 
-@each $color, $var in ('white', $white), ('black', $black) {
+@each $color, $var in ('white', $white), ('black', $black), ('gray', $gray) {
   .h-color--#{$color} {
     color: $var;
   }

@@ -6,5 +6,8 @@ mixin event(data)
       .event__time!= data.time
     section.event__section.event__section--content
       if data.emoji
-      .event__emoji!= data.emoji
-      .event__text!= data.text
+        .event__emoji!= data.emoji
+      if data.text
+        .event__text!= data.text
+      if data.address
+        .event__address!= data.address

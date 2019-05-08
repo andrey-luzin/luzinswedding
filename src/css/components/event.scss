@@ -30,6 +30,7 @@
     margin-top: rem(24px);
     font-size: rem(22px);
     font-family: $font-beautiful;
+    color: $green;
   }
 
   &__emoji {
@@ -39,6 +40,11 @@
 
   &__text {
     line-height: rem(22px);
+  }
+
+  &__address {
+    color: $gray;
+    margin-top: rem(4px);
   }
 }
 
