@@ -32,9 +32,9 @@
   }
 
   &__answer {
-    display: flex;
-    flex-grow: 1;
     align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   &:last-child {
