@@ -2,7 +2,7 @@ mixin __galleryModal(src)
     .gallery__modalSlide
         .gallery__modalImageWrapper
             img.gallery__modalImage(
-                data-lazy=src
+                data-src=src
             )
 
 mixin __galleryItem(preview)
@@ -15,7 +15,7 @@ mixin __galleryItem(preview)
     - var g = 0;
     - var m = 0;
 
-    while g < 116
+    while g < 117
         +__galleryItem("./imgs/gallery/preview/photo" + (g) + ".jpg")
         - g++;
         
@@ -24,6 +24,6 @@ mixin __galleryItem(preview)
         .gallery__modalClose(tabindex=0)
         .gallery__arrowWrapper.js-galleryNav
         .gallery__modalContent.js-gallerySlider
-            while m < 116
+            while m < 117
                 +__galleryModal("./imgs/gallery/1600/photo" + (m) + ".jpg")
                 - m++;

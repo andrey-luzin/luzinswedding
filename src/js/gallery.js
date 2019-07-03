@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $('.gallery__image').lazy();
-
+  $('.gallery__modalImage').lazy();
+  
   $(".gallery__item").on("click", function(){
     openModal($(this));
   });
