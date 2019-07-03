@@ -16,7 +16,6 @@ const browserSync = require("browser-sync");
 const clean = require('gulp-clean');
 const reload = browserSync.reload;
 const sassGlob = require('gulp-sass-glob');
-const data = require('gulp-data');
 const fs = require('fs');
 
 const srcPath = './src/';
@@ -54,7 +53,7 @@ const config = {
   server: {
     baseDir: buildPath
   },
-  tunnel: true,
+  // tunnel: true,
   host: 'localhost',
   port: 9000,
   logPrefix: "Luzins"
