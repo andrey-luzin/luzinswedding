@@ -2,7 +2,7 @@ mixin __galleryModal(src)
     .gallery__modalSlide
         .gallery__modalImageWrapper
             img.gallery__modalImage(
-                data-src=src
+                data-lazy=src
             )
 
 mixin __galleryItem(preview)
@@ -27,3 +27,4 @@ mixin __galleryItem(preview)
             while m < 117
                 +__galleryModal("./imgs/gallery/1600/photo" + (m) + ".jpg")
                 - m++;
+        .gallery__modalLoader 💖

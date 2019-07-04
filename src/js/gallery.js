@@ -1,6 +1,6 @@
 $(document).ready(function(){
   $('.gallery__image').lazy();
-  $('.gallery__modalImage').lazy();
+  $('.gallery__image').lazy();
   
   $(".gallery__item").on("click", function(){
     openModal($(this));
@@ -14,9 +14,8 @@ $(document).ready(function(){
   
   function initCarousel() {
     $('.js-gallerySlider').slick({
-      lazyLoad: 'progressive',
       appendArrows: $(".js-galleryNav"),
-      adaptiveHeight: true,
+      // adaptiveHeight: true,
       prevArrow: '<button class="gallery__arrow gallery__arrow--prev"></button>',
       nextArrow: '<button class="gallery__arrow gallery__arrow--next"></button>',
     });

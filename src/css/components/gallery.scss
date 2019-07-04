@@ -97,27 +97,25 @@ $cols: 5;
   }
 
   &__modalImageWrapper {
-    @extend %after;
     min-width: rem(100px);
     min-height: rem(100px);
     height: 100%;
     display: flex;
+  }
 
-    &:after {
-
-      content: '💖';
-      font-size: rem(70px);
-      animation: heartbeat 1.2s infinite;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: -1;
-    }
+  &__modalLoader {
+    font-size: rem(70px);
+    animation: heartbeat 1.2s infinite;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    position: absolute;
   }
 
   &__modalImage {
