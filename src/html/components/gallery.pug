@@ -1,30 +1,13 @@
-mixin __galleryModal(src)
-    .gallery__modalSlide
-        .gallery__modalImageWrapper
-            img.gallery__modalImage(
-                data-lazy=src
-            )
-
 mixin __galleryItem(preview)
     figure.gallery__item(tabindex=0)
         img.gallery__image(
             data-src=preview
         )
 
-.gallery
-    - var g = 0;
-    - var m = 0;
+mixin gallery(data)
+    .gallery
+        - var g = 0;
 
-    while g < 117
-        +__galleryItem("./imgs/gallery/preview/photo" + (g) + ".jpg")
-        - g++;
-        
-    .gallery__modal
-        .gallery__modalOverlay
-        .gallery__modalClose(tabindex=0)
-        .gallery__arrowWrapper.js-galleryNav
-        .gallery__modalContent.js-gallerySlider
-            while m < 117
-                +__galleryModal("./imgs/gallery/1600/photo" + (m) + ".jpg")
-                - m++;
-        .gallery__modalLoader 💖
+        while g < data.length
+            +__galleryItem("./imgs/" + data.path + "/preview/photo" + (g) + ".jpg")
+            - g++;

@@ -1,0 +1,20 @@
+mixin __modal(src)
+    .galleryModal__modalSlide
+        .galleryModal__modalImageWrapper
+            img.galleryModal__modalImage(
+                alt="",
+                data-lazy=src
+            )
+            
+mixin galleryModal(data)
+  .galleryModal
+        .galleryModal__modalOverlay
+        .galleryModal__modalClose(tabindex=0)
+        .galleryModal__arrowWrapper.js-galleryNav
+        .galleryModal__modalContent.js-gallerySlider
+            for d in data
+                - var m = 0;
+                while m < d.length
+                    +__modal("./imgs/" + d.path + "/1600/photo" + (m) + ".jpg")
+                    - m++;
+        .galleryModal__modalLoader 💖

@@ -1,4 +1,6 @@
 include ../components/head
+include ../components/gallery
+        include ../components/galleryModal
 doctype html
 
 html(lang="ru")
@@ -8,7 +10,34 @@ html(lang="ru")
       include ../components/header
       include ../components/photoContainer
       .container.container--full.h-mt--20.h-mb--50.h-align--center
-        h1.text--h2 Фотографии с прогулки
-        include ../components/gallery
-        .text.h-pb--40
-          p Пока что это анонс фотографий. Все остальные будут позже!
+        .text.h-pt--30.h-pb--10
+          p Скачать весь #[a(href="https://yadi.sk/d/B4q6Gy4Gp0mOjw", target="_blank") архив фотографий]
+        h1.text--h2 Тот самый момент
+        +gallery({"path": "01-zags", "length": 71})
+        h2.text--h2 Променад
+        +gallery({"path": "02-walking", "length": 138})
+        h2.text--h2 Особняк
+        +gallery({"path": "03-rest", "length": 259})
+        h2.text--h2 Совершенство
+        +gallery({"path": "04-studio", "length": 192})
+        
+        +galleryModal(
+          [
+            {
+              "path": "01-zags", 
+              "length": 71
+            },
+            {
+              "path": "02-walking", 
+              "length": 138
+            },
+            {
+              "path": "03-rest", 
+              "length": 259
+            },
+            {
+              "path": "04-studio", 
+              "length": 192
+            }
+          ]
+        )

@@ -14,14 +14,14 @@ $(document).ready(function(){
   function initCarousel() {
     $('.js-gallerySlider').slick({
       appendArrows: $(".js-galleryNav"),
-      prevArrow: '<button class="gallery__arrow gallery__arrow--prev"></button>',
-      nextArrow: '<button class="gallery__arrow gallery__arrow--next"></button>',
+      prevArrow: '<button class="galleryModal__arrow galleryModal__arrow--prev"></button>',
+      nextArrow: '<button class="galleryModal__arrow galleryModal__arrow--next"></button>',
     });
   }
 
   function openModal(self) {
-    $('.gallery__modal').show();
-    $('.gallery__modal').addClass("gallery__modal--active");
+    $('.galleryModal').show();
+    $('.galleryModal').addClass("galleryModal--active");
     $('html').css({'overflow': 'hidden'});
     var slideIndex = self.index();
     initCarousel();
@@ -29,13 +29,13 @@ $(document).ready(function(){
   }
 
   function closeModal(){
-    $(".gallery__modal").hide();
-    $(".gallery__modal").removeClass("gallery__modal--active");
+    $(".galleryModal").hide();
+    $(".galleryModal").removeClass("galleryModal--active");
     $('html').css({'overflow': 'visible'});
     $('.js-gallerySlider').slick('unslick');
   }
 
-  $(".gallery__modalClose").on("click", function(){
+  $(".galleryModal__modalClose").on("click", function(){
     closeModal();
   });
 
